@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style lang="">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .subnav {
+            width: 30px;
+            margin: 100px auto;
+        }
+
+        .subnav li {
+            list-style: none;
+            height: 30px;
+            background-color: pink;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .subnav li div {
+            position: absolute;
+            right: 0;
+            width: 0;
+            z-index: -1;
+            height: 100%;
+            background-color: purple;
+            transition: all 1s;
+        }
+        .subnav li:hover div {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="subnav">
+        <ul>
+            <li>
+                <div></div>
+            </li>
+            <li>
+                <div></div>
+            </li>
+            <li>
+                <div></div>
+            </li>
+            <li>
+                <div></div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
