@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .outer {
+      width: 220px;
+      height: 220px;
+      position: relative;
+    }
+
+    .front {
+      position: absolute;
+      transition: all 2s;
+      /* 设置元素的背面是否显示 */
+      backface-visibility: hidden;
+    }
+    /* 背面文字层 */
+    .back {
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      line-height: 220px;
+      text-align: center;
+      font-size: 20px;
+      transform: rotateY(180deg);
+      background-color: #ccc;
+      transition: all 2s;
+      backface-visibility: hidden;
+    }
+    .outer:hover .front{
+      transform: rotateY(180deg);
+    }
+    .outer:hover .back{
+      transform: rotateY(0deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="back">
+      图片翻转
+    </div>
+    <div class="front"><img src="images/2.jpg" alt=""></div>
+  </div>
+</body>
+</html>

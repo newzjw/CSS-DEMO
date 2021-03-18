@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1 {
+      height: 256px;
+      /*
+          calc() 用来帮助我们计算
+      */
+      width: calc(1536px / 6);
+      margin: 0 auto;
+      /*设置背景图片*/
+      background-image: url("images/bg3.png");
+      /* 指定背景位置*/
+      background-position: 0 0;
+      animation-name: run;
+      animation-duration: 400ms;
+      /*
+        animation-timing-function 指定时间函数
+      */
+      /* 用第一个出现问题，刚开始不显示第一帧 */
+      /* animation-timing-function: steps(5, start); */
+      animation-timing-function: steps(6);
+      /*
+        animation-iteration-count 动画执行的次数
+        infinite 表示循环执行
+    */
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes run {
+
+      /*指定动画的开始位置*/
+      0% {
+        background-position: 0 0;
+      }
+
+      /*指定动画的结束位置*/
+      100% {
+        /* 用第一个出现问题，不显示最后一帧 */
+        /* background-position: calc(-1536px / 6 * 5) 0; */
+        background-position: -1536px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1"></div>
+</body>
+
+</html>
